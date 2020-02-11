@@ -1,5 +1,7 @@
 <script>
+
   export let name
+
 </script>
 
 <style src="./style.scss"></style>

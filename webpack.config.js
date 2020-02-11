@@ -2,7 +2,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const PreloadWebpackPlugin = require('@vue/preload-webpack-plugin')
 const path = require('path')
-const { scss } = require('svelte-preprocess')
+const { scss, globalStyle } = require('svelte-preprocess')
 
 const mode = process.env.NODE_ENV || 'development'
 const prod = mode === 'production'
@@ -12,6 +12,7 @@ module.exports = {
   resolve: {
     alias: {
       svelte: path.resolve('node_modules', 'svelte'),
+      '@node': path.resolve('node_modules'),
       '@views': path.resolve(__dirname, './src/views'),
       '@components': path.resolve(__dirname, './src/components/index.js'),
       '@assets': path.resolve(__dirname, './src/assets')
@@ -34,7 +35,7 @@ module.exports = {
           options: {
             emitCss: true,
             hotReload: true,
-            preprocess: require('svelte-preprocess')([scss()])
+            preprocess: require('svelte-preprocess')([scss(), globalStyle()])
           }
         }
       },

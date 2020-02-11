@@ -1,3 +1,5 @@
-import NavLink from './NavLink/index.js'
+import Layout from './Layout'
+import Head from './Head'
+import NavLink from './NavLink'
 
-export { NavLink }
+export { Layout, Head, NavLink }
