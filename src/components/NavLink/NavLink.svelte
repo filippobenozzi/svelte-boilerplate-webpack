@@ -10,6 +10,7 @@
         // The object returned here is spread on the anchor element's attributes
         return isActive ? { class: 'active' } : {}
     }
+
 </script>
 
 <Link {to} {getProps}>
