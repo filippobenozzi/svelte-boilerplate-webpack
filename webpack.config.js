@@ -12,7 +12,6 @@ module.exports = {
   resolve: {
     alias: {
       svelte: path.resolve('node_modules', 'svelte'),
-      '@node': path.resolve('node_modules'),
       '@views': path.resolve(__dirname, './src/views'),
       '@components': path.resolve(__dirname, './src/components/index.js'),
       '@assets': path.resolve(__dirname, './src/assets')
@@ -38,6 +37,17 @@ module.exports = {
             preprocess: require('svelte-preprocess')([scss(), globalStyle()])
           }
         }
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          // Creates `style` nodes from JS strings
+          'style-loader',
+          // Translates CSS into CommonJS
+          'css-loader',
+          // Compiles Sass to CSS
+          'sass-loader'
+        ]
       },
       {
         test: /\.css$/,

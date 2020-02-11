@@ -1,6 +1,6 @@
 <script>
 
-    import 'bulma/css/bulma.min.css'
+    import './global.scss';
 
     export let title
     const base_title = 'Svelte App'

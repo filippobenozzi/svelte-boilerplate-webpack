@@ -1,10 +1,9 @@
 <script>
 
-    import { Head } from '@components'
-
 </script>
 
-<Head title="Something" />
 <style src="./style.scss"></style>
 
-<h1>This is... something.</h1>
+<div class="container">
+    <h1>This is... something.</h1>
+</div>
