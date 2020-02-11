@@ -11,7 +11,9 @@ module.exports = {
   entry: './src/main.js',
   resolve: {
     alias: {
+      svelte: path.resolve('node_modules', 'svelte'),
       '@views': path.resolve(__dirname, './src/views'),
+      '@components': path.resolve(__dirname, './src/components/index.js'),
       '@assets': path.resolve(__dirname, './src/assets')
     },
     extensions: ['.mjs', '.js', '.svelte']
@@ -26,7 +28,7 @@ module.exports = {
     rules: [
       {
         test: /\.svelte$/,
-        exclude: /node_modules/,
+        // exclude: /node_modules/,
         use: {
           loader: 'svelte-loader',
           options: {
