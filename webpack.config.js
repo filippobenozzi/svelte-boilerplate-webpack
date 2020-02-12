@@ -13,6 +13,7 @@ module.exports = {
     alias: {
       svelte: path.resolve('node_modules', 'svelte'),
       '@views': path.resolve(__dirname, './src/views'),
+      '@modules': path.resolve(__dirname, './src/modules'),
       '@components': path.resolve(__dirname, './src/components/index.js'),
       '@assets': path.resolve(__dirname, './src/assets')
     },

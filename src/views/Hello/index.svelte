@@ -7,3 +7,4 @@
 <style src="./style.scss"></style>
 
 <h1>Hello, {name}!</h1>
+<span>test</span>
